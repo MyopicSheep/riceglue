@@ -1,0 +1,25 @@
+<div id="main-wrapper" class="animate-bottom">
+  <nav id="navigator">
+    <a [routerLink]="['/projects']" [routerLinkActive]="['is-active']" title="Projects"><span class="icon-apps"></span></a>
+    <a [routerLink]="['/blog']" [routerLinkActive]="['is-active']" title="Blog"><span class="icon-blog"></span></a>
+    <a [routerLink]="['/announcements']" [routerLinkActive]="['is-active']" title="History"><span class="icon-history"></span></a>
+    <a [routerLink]="['/dashboard']" [routerLinkActive]="['is-active']" id="home-button" title="Dashboard">
+    </a>
+  </nav>
+  <main-app>
+    <router-outlet></router-outlet>
+  </main-app>
+  <footer>
+    <div class="blurb">
+      <h2>Daphne M.H. Cheung, Probability Nerd and Creature Nut</h2>
+      <p>Developer-in-perpetual-training, problem solver, and experimenter, who is on a quest to  decipher the intricacies behind solving all sorts of problems and making good decisions.</p>
+      <p>Collector of unconventional containers, tinkerer of broken things, hobbiest doodler, and lover of all things round and chubby.</p> 
+    </div>
+    <div class="blurb links">
+      <a class="bottom-link" href="mailto:daph&#46;cheung&#64;riceglue&#46;com">email</a>
+      <span class="new-window"><a class="bottom-link" href="https://github.com/myopicsheep" target="_blank">github<span class="off-screen">(opens a new window)</span></a><sup><span class="icon-new_window"></span></sup></span>
+      <a [routerLink]="['/privacy']" [routerLinkActive]="['is-active']" id="privacy" title="Privacy">your privacy</a>
+    </div>
+    <div rgCopyright class="copyright"></div>
+  </footer>
+</div>

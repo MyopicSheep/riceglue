@@ -1,0 +1,50 @@
+/* Keep Dashboard centered when screen gets too wide */
+
+.wrapper {
+  top: 0;
+  left: 60px;
+  min-width: calc(100% - 60px);
+  max-width: 1100px;
+  animation: fadein 0.3s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+/* Modify section to accommodate 3 instead of 2 items in Dashboard view */
+
+@media screen and (min-width: 600px) {
+  section article {
+    width: 33.3%;
+    margin: 4px;
+  }
+}
+
+/* Shrink titles and post size for Dashboad view */
+h2 {
+  font-size: 0.8em;
+  padding: 2em 0 0.5em 1em;
+  text-align: left;
+  margin-left: 5px;
+  border-bottom: 1px solid #eee;
+}
+
+.title,
+.item-name {
+  font-size: 1.1em;
+}
+
+.excerpt, 
+.desc {
+  font-size: 0.8em;
+}
+
+.post {
+  min-height: 50px;
+  height: auto !important;
+}
+
+/* Style message when there are no updates */
+.no-update {
+  display: flex;
+  max-height: 55px !important;
+  justify-content: center;
+}

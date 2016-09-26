@@ -1,0 +1,55 @@
+<div class="header">
+  <h1>DASHBOARD</h1>
+</div>
+<div *ngIf='items' class="wrapper">
+  <h2>Recent Announcements</h2>
+  <section>
+    <div class="subsection">
+      <article *ngIf='!( items[0] | rgPublishDate ).length' class="no-update disable-link">
+        <p><small>No announcements this week.</small></p>
+      </article>
+      <article *ngFor='let announcement of ( items[0] | rgPublishDate )' class="bulletin">
+        <span class="date">{{ announcement.date | date: 'MMM.d.yyyy'}}</span>
+        <span class="announce">{{ announcement.title }}: {{ announcement.desc }}</span>
+      </article>
+    </div>
+  </section>
+  <h2>Recent Blog Updates</h2>
+  <section *ngIf='items[1]'>
+    <article *ngIf='!( items[1] | rgPublishDate ).length' class="no-update disable-link">
+      <p><small>No updates this week.</small></p>
+    </article>
+    <article rgBlogMouseover *ngFor='let post of ( items[1] | rgPublishDate )' (click)="onSelect(post)" class="blog post touch-click">
+      <div class="date">
+        <span class="year">{{ post.date | date: 'yyyy' }}</span>
+        <span class="month">{{ post.date | date: 'MMM' | uppercase }}</span>
+        <span class="day">{{ post.date | date: 'dd' }}</span>
+      </div>
+      <div class="details">
+        <span class="title">{{ post.title }}</span>
+        <span class="excerpt">{{ post.desc }}</span>
+      </div>
+      <div class="tag">{{ post.category }}</div>
+    </article>
+  </section>
+  <h2>Recent App Updates</h2>
+  <section *ngIf='items[2]'>
+    <article *ngIf='!( items[2] | rgPublishDate ).length' class="no-update disable-link">
+      <p><small>No updates this week.</small></p>
+    </article>
+    <a rgListMouseover *ngFor='let webapp of ( items[2] | rgPublishDate )' href="{{ webapp.url }}" target="_blank" class="touch-click">
+      <div [ngStyle]="{'background': 'url(' + webapp.image + ') center center no-repeat no-repeat', 'backgroundPositionX': '20%'}" class="item">
+        <div class="veil"></div>
+        <span class="item-name">
+          {{ webapp.title }}
+          <span class="publish-date">{{ webapp.date | date: 'MMM.d.yyyy'}}</span>
+        </span>
+        <span class="icon-new_window"></span>
+        <span class="off-screen">(opens a new window)</span>
+        <span class="desc">{{ webapp.desc }}</span>
+        <span class="vert"></span>
+        <span class="horz"></span>
+      </div>
+    </a>
+  </section>
+</div>

@@ -1,0 +1,19 @@
+<div class="header">
+  <h1>BLOG</h1>
+</div>
+<section *ngIf="posts">
+  <input type="text" [(ngModel)]="factor"
+          placeholder="Search blog posts">
+  <div rgBlogMouseOver *ngFor="let post of ( posts | rgSearch:factor )" (click)="gotoSelect(post)" class="blog post touch-click">
+    <div class="date">
+      <span class="year">{{ post.date | date: 'yyyy' }}</span>
+      <span class="month">{{ post.date | date: 'MMM' | uppercase }}</span>
+      <span class="day">{{ post.date | date: 'dd' }}</span>
+    </div>
+    <div class="details">
+      <span class="title">{{ post.title }}</span>
+      <span class="excerpt">{{ post.desc }}</span>
+    </div>
+    <div class="tag">{{ post.category }}</div>
+  </div>
+</section>

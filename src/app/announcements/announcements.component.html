@@ -1,0 +1,13 @@
+<div class="header">
+  <h1>ARCHIVED ANNOUNCEMENTS</h1>
+</div>
+<section *ngIf="announcements">
+  <input type="text" [(ngModel)]="factor"
+          placeholder="Search announcements">
+  <div class="subsection">
+    <article *ngFor='let announcement of ( announcements | rgSearch:factor )' class="bulletin">
+      <span class="date">{{ announcement.date | date: 'MMM.d.yyyy'}}</span>
+      <span class="announce">{{ announcement.title }}: {{ announcement.desc }}</span>
+    </article>
+  </div>
+</section>

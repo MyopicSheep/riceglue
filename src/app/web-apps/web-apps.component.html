@@ -1,0 +1,43 @@
+<div class="header">
+  <h1>PROJECTS</h1>
+</div>
+<div *ngIf="webapps" class="wrapper">
+  <input type="text" [(ngModel)]="factor"
+          placeholder="Search projects">
+  <h2>Web</h2>
+  <section>
+    <div class="no-projects" *ngIf="( webapps | rgSearch:factor | rgType:'web' ).length === 0"><p>Coming Soon!</p></div>
+    <a rgListMouseover *ngFor="let webapp of ( webapps | rgSearch:factor | rgType:'web' )" href="{{ webapp.url }}" target="_blank" class="touch-click">
+        <div [ngStyle]="{'background': 'url(' + webapp.image + ') center center no-repeat no-repeat', 'backgroundPositionX': '20%'}" class="item">
+          <div class="veil"></div>
+          <span class="item-name">
+            {{ webapp.title }}
+            <span class="publish-date">{{ webapp.date | date: 'MMM.d.yyyy'}}</span>
+          </span>
+          <span class="icon-new_window"></span>
+          <span class="off-screen">(opens a new window)</span>
+          <span class="desc">{{ webapp.desc }}</span>
+          <span class="vert"></span>
+          <span class="horz"></span>
+        </div>
+    </a>
+  </section>
+  <h2>Machine Learning</h2>
+  <section>
+    <div class="no-projects" *ngIf="( webapps | rgSearch:factor | rgType:'ml' ).length === 0"><p>Coming Soon!</p></div>
+    <a rgListMouseover *ngFor="let webapp of ( webapps | rgSearch:factor | rgType:'ml' )" href="{{ webapp.url }}" target="_blank" class="touch-click">
+        <div [ngStyle]="{'background': 'url(' + webapp.image + ') center center no-repeat no-repeat', 'backgroundPositionX': '20%'}" class="item">
+          <div class="veil"></div>
+          <span class="item-name">
+            {{ webapp.title }}
+            <span class="publish-date">{{ webapp.date | date: 'MMM.d.yyyy'}}</span>
+          </span>
+          <span class="icon-new_window"></span>
+          <span class="off-screen">(opens a new window)</span>
+          <span class="desc">{{ webapp.desc }}</span>
+          <span class="vert"></span>
+          <span class="horz"></span>
+        </div>
+    </a>
+  </section>
+</div>

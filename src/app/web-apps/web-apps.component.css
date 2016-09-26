@@ -1,0 +1,185 @@
+/** Applies to all pages except Blog and About **/
+/** General size and style of the items in a list **/
+
+/* Shrink titles*/
+h2 {
+  font-size: 0.8em;
+  padding: 2em 0 0.5em 1em;
+  text-align: left;
+  margin: 0 5px;
+  border-bottom: 1px solid #eee;
+}
+
+/* Style message when there are no updates */
+.no-projects {
+  display: flex;
+  width: 100%;
+  max-height: 55px !important;
+  justify-content: center;
+}
+
+.no-projects p {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 0.9em;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.wrapper {
+  top: 0;
+  margin-bottom: 10px;
+  left: 60px;
+  min-width: calc(100% - 60px);
+  max-width: 1100px;
+  animation: fadein 0.3s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+section a,
+section article {
+  width: 98%;
+  margin: 4px auto;
+  width: calc(100% - 10px);
+  height: 300px;
+  color: #262626;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 600px) {
+  section a,
+  section article {
+    width: 48%;
+    margin: 4px auto;
+    width: calc(50% - 10px);
+  }
+}
+
+@media screen and (min-width: 910px) {
+  section a,
+  section article {
+    width: 30%;
+    margin: 4px;
+    width: calc(33.3% - 10px);
+  }
+}
+
+
+/** General style of each item in a list **/
+.item {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* IE/Edge */
+  user-select: none;           /* non-prefixed version, currently not supported by any browser */
+  position: relative;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+  text-align: center;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.veil {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 6px;
+  background-color: #786b48;
+  opacity: 0.05;
+  overflow: hidden;
+}
+
+
+.vert {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-bottom: -50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  border-left: 1px solid rgba(255, 255, 255, 1);
+  border-right: 1px solid rgba(255, 255, 255, 1);
+  width: 85%;
+  width: calc(95% - 50px);
+  height: 0;
+}
+
+.horz {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-bottom: -50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  border-top: 1px solid rgba(255, 255, 255, 1);
+  border-bottom: 1px solid rgba(255, 255, 255, 1);
+  width: 0;
+  height: 85%;
+  height: calc(95% - 50px);
+}
+
+.item-name {
+  position: relative;
+  margin-top: 1.6em;
+  width: 70%;
+  width: calc(70% - 55px);
+  font-size: 2em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.item-name .publish-date {
+  display: block;
+  font-size: 0.25em;
+  margin-bottom: 1em;
+}
+
+.item-name .publish-date:before {
+  content: "Posted on ";
+}
+
+@media screen and (min-width: $small-screen) {
+  .item-name {
+    width: 95%;
+    width: calc(95% - 60px);
+  }
+  .item-name .publish-date {
+    font-size: 0.3em;
+  }
+}
+
+.icon-new_window {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  top: 0;
+  left: 100%;
+  margin-left: -40px;
+  font-size: 1em;
+  color: #fff;
+}
+
+.desc {
+  opacity: 0;
+  width: 70%;
+  width: calc(70% - 55px);
+  margin-top: 2em;
+  font-size: 0.9em;
+  z-index: 5;
+}
+
+@media screen and (min-width: $small-screen) {
+  .desc {
+    width: 95%;
+    width: calc(95% - 60px);
+  }
+}

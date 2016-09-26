@@ -1,0 +1,13 @@
+<div class="post-page" *ngIf = 'post'>
+  <div class="arrow-prev" (click)="previous(post)">{{ prevPostTitle() }}</div>
+  <header><img class="decor" src="../assets/images/burble.png" alt="Puffy Burble"></header>
+  <div class="summary">
+    <h1 class="title">{{ post.title }}</h1>
+    <span class="category">{{ post.date | date: 'EEEE, MMMM d, yyyy' }}<br>Category: {{ post.category }}</span>
+  </div>
+  <div class="side-bar">
+  </div>
+  <rg-include rg-include-content [postContent]="post.content"></rg-include>
+  <div class="arrow-next" (click)="after(post)">{{ afterPostTitle() }}</div>
+</div>
+
