@@ -34,7 +34,7 @@ export class BlogComponent implements OnInit {
 
   ngOnInit() {
     this.router.navigate(['/blog']);
-    this.titleService.setTitle('Blog | The Official Rice Glue Website');
+    this.titleService.setTitle('Blog | The Pig and Teddy Rice Website');
     this.getPosts();
   }
 

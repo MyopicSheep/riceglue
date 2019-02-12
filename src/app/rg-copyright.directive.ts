@@ -11,7 +11,7 @@ export class RgCopyright {
 
   constructor(el: ElementRef) {
     this.el = el.nativeElement;
-    let copyrightDetails = '&nbsp; RiceGlue.com. All Rights Reserved.';
+    let copyrightDetails = '&nbsp; PigandShrub.com. All Rights Reserved.';
     let d = new Date();
     let currYear = d.getFullYear();
     if (currYear > 2016) {

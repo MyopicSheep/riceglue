@@ -10,7 +10,6 @@
 }
 
 /* Modify section to accommodate 3 instead of 2 items in Dashboard view */
-
 @media screen and (min-width: 600px) {
   section article {
     width: 33.3%;
@@ -45,6 +44,7 @@ h2 {
 /* Style message when there are no updates */
 .no-update {
   display: flex;
+  width: 100% !important;
   max-height: 55px !important;
   justify-content: center;
 }

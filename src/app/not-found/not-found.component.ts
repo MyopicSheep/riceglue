@@ -17,7 +17,7 @@ export class NotFoundComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.titleService.setTitle('404 | The Official Rice Glue Website');
+    this.titleService.setTitle('404 | The Pig and Teddy Rice Website');
     this.router.navigate(['/404']);
   }
 

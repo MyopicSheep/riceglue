@@ -1,9 +1,9 @@
 <div id="main-wrapper" class="animate-bottom">
   <nav id="navigator">
-    <a [routerLink]="['/projects']" [routerLinkActive]="['is-active']" title="Projects"><span class="icon-apps"></span></a>
-    <a [routerLink]="['/blog']" [routerLinkActive]="['is-active']" title="Blog"><span class="icon-blog"></span></a>
-    <a [routerLink]="['/announcements']" [routerLinkActive]="['is-active']" title="History"><span class="icon-history"></span></a>
-    <a [routerLink]="['/dashboard']" [routerLinkActive]="['is-active']" id="home-button" title="Dashboard">
+    <a [routerLink]="['/projects']" [routerLinkActive]="['is-active']" onclick="dataLayer.push({'viewDestination': 'apps'});" title="Projects"><span class="icon-apps"></span></a>
+    <a [routerLink]="['/blog']" [routerLinkActive]="['is-active']" onclick="dataLayer.push({'viewDestination': 'blog'});" title="Blog"><span class="icon-blog"></span></a>
+    <a [routerLink]="['/announcements']" [routerLinkActive]="['is-active']" onclick="dataLayer.push({'viewDestination': 'history'});" title="History"><span class="icon-history"></span></a>
+    <a [routerLink]="['/dashboard']" [routerLinkActive]="['is-active']" id="home-button" onclick="dataLayer.push({'viewDestination': 'dashboard'});" title="Dashboard">
     </a>
   </nav>
   <main-app>
@@ -11,13 +11,12 @@
   </main-app>
   <footer>
     <div class="blurb">
-      <h2>Daphne M.H. Cheung, Probability Nerd and Creature Nut</h2>
-      <p>Developer-in-perpetual-training, problem solver, and experimenter, who is on a quest to  decipher the intricacies behind solving all sorts of problems and making good decisions.</p>
-      <p>Collector of unconventional containers, tinkerer of broken things, hobbiest doodler, and lover of all things round and chubby.</p> 
+      <h2>The Pig and Teddy Rice Site</h2>
+      <p>This site is meant to be a content hub for Daphne to record completed projects and ideas. She built this site using Angular 2, TypeScript, and Angular CLI.</p> 
     </div>
     <div class="blurb links">
-      <a class="bottom-link" href="mailto:daph&#46;cheung&#64;riceglue&#46;com">email</a>
-      <span class="new-window"><a class="bottom-link" href="https://github.com/myopicsheep" target="_blank">github<span class="off-screen">(opens a new window)</span></a><sup><span class="icon-new_window"></span></sup></span>
+      <a class="bottom-link" href="mailto:daph&#46;cheung&#64;pigandshrub&#46;com">email</a>
+      <span class="new-window"><a class="bottom-link" href="https://github.com/pigandshrub" target="_blank">github<span class="off-screen">(opens a new window)</span></a><sup><span class="icon-new_window"></span></sup></span>
       <a [routerLink]="['/privacy']" [routerLinkActive]="['is-active']" id="privacy" title="Privacy">your privacy</a>
     </div>
     <div rgCopyright class="copyright"></div>

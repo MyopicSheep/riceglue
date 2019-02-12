@@ -28,7 +28,7 @@ export class WebAppsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.titleService.setTitle('Projects | The Official Rice Glue Website');
+    this.titleService.setTitle('Projects | The Pig and Teddy Rice Website');
     this.getWebApps();
   }
 

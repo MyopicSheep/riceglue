@@ -1,0 +1,36 @@
+
+.icon-new_window {
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  top: 0;
+  left: 100%;
+  margin-left: -5px;
+  font-size: 0.9em;
+}
+
+
+.blurb {
+  font-family: 'Noto Sans', sans-serif;
+  padding: 3em 2em;
+  text-align: left;
+}
+
+.blurb a {
+  font-weight: 700;
+  color: #786b48;
+}
+
+.blurb a:hover,
+.blurb a:focus {
+  color: #ac9e76;
+  transition: all 0.3s ease-in-out;
+}
+
+
+@media screen and (min-width: 600px) {
+  .blurb {
+    padding: 5em 7em;
+    max-width: 800px;
+  }
+}

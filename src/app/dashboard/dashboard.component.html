@@ -4,10 +4,10 @@
 <div *ngIf='items' class="wrapper">
   <h2>Recent Announcements</h2>
   <section>
+    <article *ngIf='!( items[0] | rgPublishDate ).length' class="no-update disable-link">
+      <p><small>No announcements this week.</small></p>
+    </article>
     <div class="subsection">
-      <article *ngIf='!( items[0] | rgPublishDate ).length' class="no-update disable-link">
-        <p><small>No announcements this week.</small></p>
-      </article>
       <article *ngFor='let announcement of ( items[0] | rgPublishDate )' class="bulletin">
         <span class="date">{{ announcement.date | date: 'MMM.d.yyyy'}}</span>
         <span class="announce">{{ announcement.title }}: {{ announcement.desc }}</span>

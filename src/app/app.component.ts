@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ROUTER_DIRECTIVES } from '@angular/router';
+import { Router, ActivatedRoute, ROUTER_DIRECTIVES, Event, NavigationEnd } from '@angular/router';
 import { RgCopyright } from './rg-copyright.directive';
 declare var jQuery: any;
 
@@ -11,8 +11,18 @@ declare var jQuery: any;
   directives: [ROUTER_DIRECTIVES, RgCopyright]
 })
 export class AppComponent implements OnInit {
-  constructor() {
-  }
+  constructor(public router:Router) {
+ 
+        this.router.events.subscribe(
+            (event:Event) => {
+                if (event instanceof NavigationEnd) {
+                    (<any>window).dataLayer.push({
+                        event: 'viewDestination',
+                        action: event.urlAfterRedirects,
+                    });
+                }
+            });
+    }
 
   ngOnInit() {
     let documentHeight = jQuery(document).height();

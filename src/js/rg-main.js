@@ -3,12 +3,12 @@ var time = 0;
 var loading;
 
 function entrance() {
-  loading = setInterval(showProgress, 20); // 20ms to accommodate most browsers' min. limit
+  loading = setInterval(showProgress, 10);
 }
 
 function showProgress() {
   var progress = $('#load-progress');
-  var percentage = Math.min(100, Math.ceil(time / 50 * 100));
+  var percentage = Math.min(100, Math.ceil(time / 60 * 100));
   progress.text(percentage + '%');
   time += 1;
   if (percentage === 100) {
@@ -19,7 +19,7 @@ function showProgress() {
 function showPage() {
   clearInterval(loading);
   $('#loader-wrap').css({ 'opacity': 0});
-  setTimeout(function (){ $('#loader-wrap').remove() }, 1000);
+  setTimeout(function (){ $('#loader-wrap').remove() }, 200);
 }
 
 function adjustSize() {
@@ -105,3 +105,4 @@ $('html').click(function (e) {
     e.stopPropagation();
   }
 });
+

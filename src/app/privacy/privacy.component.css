@@ -1,0 +1,59 @@
+span.icon-new_window {
+  display: inline;
+  font-size: 1em;
+  padding: 0 2px;
+}
+
+h1 {
+  font-size: 1.5em;
+}
+
+h2 {
+  font-size: 1.1em;
+}
+
+a {
+  color: #262626;
+}
+
+@media screen and (min-width: 600px) {
+  section{
+    padding: 7px 2em !important;
+  }
+}
+
+article {
+  display: block !important;
+  text-align: left;
+  margin: 0;
+  margin-top: 33px;
+  padding: 45px;
+  top: 0;
+  left: 0;
+  color: #262626;
+  font-weight: 400;
+  font-size: 1.2em;
+  font-family: "Noto Sans", sans-serif;
+}
+
+article ol {
+  padding-bottom: 2em;
+}
+
+article li {
+  font-weight: 700;
+  font-size: 1em;
+}
+
+article li p,
+article p {
+  font-weight: 400;
+  font-size: 0.7em;
+}
+
+.mod-date {
+  margin-top: -1.2em;
+  font-size: 0.5em;
+  font-weight: 400;
+  font-style: italic;
+}

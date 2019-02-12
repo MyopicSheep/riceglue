@@ -4,6 +4,7 @@ import { webAppsRoute } from './web-apps/web-apps.route';
 import { announcementsRoute } from './announcements/announcements.route';
 import { dashboardRoute } from './dashboard/dashboard.route';
 import { notFoundRoute } from './not-found/not-found.route';
+import { privacyRoute } from './privacy/privacy.route';
 
 const routes: RouterConfig = [
   ...blogRoute,
@@ -11,6 +12,7 @@ const routes: RouterConfig = [
   ...announcementsRoute,
   ...dashboardRoute,
   ...notFoundRoute,
+  ...privacyRoute,
   {
     path: '',
     redirectTo: '/dashboard',

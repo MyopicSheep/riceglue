@@ -36,7 +36,7 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {
     this.router.navigate(['/dashboard']);
-    this.titleService.setTitle('Dashboard | The Official Rice Glue Website');
+    this.titleService.setTitle('Dashboard | The Pig and Teddy Rice Website');
     this.getDashboardItems();
   }
 

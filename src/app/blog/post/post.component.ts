@@ -49,7 +49,7 @@ export class PostComponent implements OnInit, OnDestroy {
       let year = +params[y];
       this.blogService.getPost(year, month, title)
         .then(post => this.post = post).then(post => this.next()).then(post => this.prev())
-        .then(post => this.titleService.setTitle(this.post.title + ' | The Official Rice Glue Website'));
+        .then(post => this.titleService.setTitle(this.post.title + ' | The Pig and Teddy Rice Website'));
     });
     this.blogService.getPosts().then(posts => this.posts = posts);
 

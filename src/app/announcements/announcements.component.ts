@@ -27,7 +27,7 @@ export class AnnouncementsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.titleService.setTitle('Announcements | The Official Rice Glue Website');
+    this.titleService.setTitle('Announcements | The Pig and Teddy Rice Website');
     this.getAnnouncements();
   }
 }
